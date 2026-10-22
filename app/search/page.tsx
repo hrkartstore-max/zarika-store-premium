@@ -1,0 +1,6 @@
+import ProductCard from "@/components/ProductCard";
+import {products} from "@/lib/products";
+export default async function SearchPage({searchParams}:{searchParams:Promise<{q?:string}>}){
+ const {q=""}=await searchParams;const term=q.trim().toLowerCase();const results=term?products.filter(p=>(p.name+" "+p.category+" "+p.description).toLowerCase().includes(term)):[];
+ return <div className="page-wrap"><div className="page-heading"><span className="eyebrow">Find your favourite</span><h1>Search Zarika</h1><p>Search by product, category or occasion.</p></div><form className="search-form" action="/search"><input name="q" defaultValue={q} placeholder="Try “saree” or “jewellery”" aria-label="Search products"/><button type="submit">Search ↗</button></form>{term&&<p style={{marginBottom:24,color:"var(--muted)"}}>{results.length} result{results.length===1?"":"s"} for “{q}”</p>}{results.length>0?<div className="product-grid">{results.map(p=><ProductCard key={p.slug} product={p}/>)}</div>:term?<div className="empty-state"><h1>No matches just yet.</h1><p>Try a broader search or explore our new arrivals.</p><a className="button button-dark" href="/category/new-arrivals">Shop new arrivals</a></div>:<div className="section-head"><p>Popular picks: sarees, co-ord sets, kurta sets and jewellery.</p></div>}</div>;
+}
