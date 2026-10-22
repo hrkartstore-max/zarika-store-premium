@@ -33,3 +33,12 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .lyvora-sticky-buy .lyvora-buy span{padding-left:8px}
 @media(max-width:760px){.lyvora-desktop-buy{display:none}}
 @media(min-width:761px){.lyvora-sticky-buy{display:none}}
+
+
+/* Checkout form hierarchy */
+.checkout-fieldset{border:1px solid var(--line);background:#fffdf9;padding:20px;margin:0 0 20px;min-width:0}
+.checkout-fieldset legend{font:500 25px var(--serif);padding:0 8px;color:var(--ink)}
+.checkout-field-help{font-size:11px;line-height:1.5;color:var(--muted);margin:8px 0 0}
+.checkout-fieldset .form-grid{margin-top:2px}
+.checkout-fieldset input:focus-visible,.checkout-fieldset select:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+@media(max-width:760px){.checkout-fieldset{padding:15px;margin-bottom:16px}.checkout-fieldset legend{font-size:23px}}
