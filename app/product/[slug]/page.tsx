@@ -12,7 +12,7 @@ export default async function ProductPage({params}:{params:Promise<{slug:string}
   <div className="lyvora-breadcrumb"><Link href="/">Home</Link><span>›</span><Link href={"/category/"+p.category.toLowerCase().replaceAll(" ","-")}>{p.category}</Link><span>›</span><span>{p.name}</span></div>
   <div className="lyvora-product">
    <div className="lyvora-gallery">
-    <div className="lyvora-main-image"><img src={p.image} alt={p.imageAlt}/><span className="lyvora-image-count">01 / 04</span><span className="lyvora-gallery-badge">{p.badge||"ZARIKA EDIT"}</span><button className="lyvora-image-zoom" type="button" aria-label="Open full-size product image" onClick={undefined}>⌕</button></div>
+    <div className="lyvora-main-image"><img src={p.image} alt={p.imageAlt}/><span className="lyvora-image-count">01 / 04</span><span className="lyvora-gallery-badge">{p.badge||"ZARIKA EDIT"}</span></div>
     <div className="lyvora-thumbnails"><button className="active"><img src={p.image} alt="Product front view"/></button><button aria-label="View detail"><img src={p.image} alt="Product detail"/></button><button aria-label="View styling"><img src={p.image} alt="Product styling"/></button><button aria-label="View fabric"><img src={p.image} alt="Fabric detail"/></button></div>
    </div>
    <div className="lyvora-info">
