@@ -1,0 +1,3 @@
+"use client";
+import { useStore } from "@/lib/store";
+export default function ProductActions({slug}:{slug:string}){const {addToCart,toggleWishlist,wishlist}=useStore();const saved=wishlist.includes(slug);return <div className="product-actions"><button className="button button-dark" onClick={()=>addToCart(slug)}>Add to bag — just lovely</button><button className="button button-outline" onClick={()=>toggleWishlist(slug)}>{saved?"♥ Saved to wishlist":"♡ Save to wishlist"}</button><p className="microcopy">✓ Easy 7-day returns · ✓ Ships across India · ✓ COD availability at checkout</p></div>}
