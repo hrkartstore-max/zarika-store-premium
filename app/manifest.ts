@@ -1,0 +1,2 @@
+import type {MetadataRoute} from "next";
+export default function manifest():MetadataRoute.Manifest{return {name:"Zarika Store",short_name:"Zarika",description:"Indian occasion wear and everyday favourites.",start_url:"/",display:"standalone",background_color:"#fffaf5",theme_color:"#7b2340",icons:[]};}
