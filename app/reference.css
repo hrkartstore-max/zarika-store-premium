@@ -92,3 +92,39 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .wishlist-remove{border:0;background:transparent;text-decoration:underline;text-underline-offset:3px;color:var(--muted);font-size:11px;cursor:pointer;padding:8px 0}
 @media(max-width:760px){.wishlist-grid{grid-template-columns:1fr;gap:18px}.wishlist-item{grid-template-columns:minmax(100px,34%) minmax(0,1fr);gap:14px;padding-bottom:18px}.wishlist-copy .product-name{font-size:13px}.wishlist-actions{gap:10px;padding-top:14px}.wishlist-actions .button{min-height:40px;padding:0 13px}}
 @media(max-width:380px){.wishlist-item{grid-template-columns:100px minmax(0,1fr)}.wishlist-actions{align-items:flex-start;flex-direction:column;gap:4px}.wishlist-actions .button{width:100%}}
+
+
+/* Customer account dashboard */
+.account-notice{max-width:1040px;margin:0 auto 24px;padding:14px 16px;background:#f8f0e3;border:1px solid #e5d5bd;color:#654b3b;font-size:12px;line-height:1.6}
+.account-dashboard{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:20px;align-items:start}
+.account-panel,.account-shortcuts{min-width:0;border:1px solid var(--line);background:#fffdf9;padding:24px}
+.account-panel-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}
+.account-panel-head h2,.account-shortcuts h2{font:500 28px var(--serif);margin:5px 0 0}
+.account-panel-head .text-link{border:0;background:transparent;color:var(--wine);text-decoration:underline;text-underline-offset:3px;font-size:12px;cursor:pointer}
+.account-profile-values p{display:flex;flex-direction:column;gap:5px;padding:12px 0;margin:0;border-bottom:1px solid var(--line)}
+.account-profile-values p:last-child{border-bottom:0}
+.account-profile-values span,.account-muted{font-size:11px;color:var(--muted)}
+.account-profile-values strong{font-size:13px;font-weight:500;overflow-wrap:anywhere}
+.account-form{display:grid;gap:14px}
+.account-form>div{min-width:0}
+.account-form label{display:block;margin-bottom:6px;font-size:12px}
+.account-form .form-field{width:100%;min-width:0}
+.account-form .button{margin-top:4px;justify-self:start}
+.account-shortcuts{background:#f8f0e8}
+.account-shortcuts h2{margin-bottom:16px}
+.account-shortcuts>a{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-top:1px solid #dfd2c4;text-decoration:none;font-size:12px}
+.account-shortcuts>a strong{font-size:11px;color:var(--wine);white-space:nowrap}
+.account-shortcuts .checkout-field-help{margin-top:16px}
+.account-address-panel{grid-column:1/-1}
+.account-count{font-size:11px;color:var(--muted)}
+.saved-address-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:24px}
+.saved-address{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px;border:1px solid var(--line);background:white;min-width:0}
+.saved-address strong{font-size:13px}
+.saved-address p{font-size:11px;line-height:1.55;margin:5px 0;overflow-wrap:anywhere}
+.saved-address .wishlist-remove{flex-shrink:0}
+.address-form{border-top:1px solid var(--line);padding-top:22px;max-width:720px}
+.address-form h3{font:500 22px var(--serif);margin:0 0 4px}
+.address-form .form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.account-feedback{margin:18px 0;padding:12px 14px;background:#edf4ea;color:#315b34;font-size:12px}
+@media(max-width:760px){.account-dashboard{grid-template-columns:1fr;gap:14px}.account-panel,.account-shortcuts{padding:18px}.account-address-panel{grid-column:auto}.saved-address-list{grid-template-columns:1fr}.address-form .form-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.address-form .form-grid{grid-template-columns:1fr}.account-panel-head h2,.account-shortcuts h2{font-size:25px}}
