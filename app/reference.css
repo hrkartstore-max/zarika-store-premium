@@ -64,3 +64,13 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .cart-recommendations .section-heading h2{font:500 clamp(30px,4vw,44px) var(--serif);margin:8px 0}
 .cart-recommendations .section-heading p{color:var(--muted);font-size:13px}
 @media(max-width:760px){.cart-recommendations{margin-top:42px}.cart-recommendations .section-heading{margin-bottom:18px}}
+
+
+/* Cart drawer shipping-goal preview */
+.drawer-shipping-progress{padding:16px 20px 14px;border-bottom:1px solid var(--line);background:#fffaf4}
+.drawer-shipping-progress p{font-size:12px;line-height:1.5;margin:0 0 10px;color:var(--ink)}
+.drawer-shipping-progress p strong{font-weight:700;color:var(--wine)}
+.drawer-progress-track{height:5px;background:#e8ded2;border-radius:10px;overflow:hidden}
+.drawer-progress-track span{display:block;height:100%;background:var(--wine);border-radius:10px;transition:width .25s ease}
+.drawer-shipping-progress>small{display:block;font-size:10px;line-height:1.45;color:var(--muted);margin-top:8px}
+@media(max-width:560px){.drawer-shipping-progress{padding:13px 16px}.drawer-shipping-progress p{font-size:11px}}
