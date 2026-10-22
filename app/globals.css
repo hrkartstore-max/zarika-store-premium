@@ -54,3 +54,47 @@
 .offer-card:nth-child(3) .offer-code{color:#f4d9b5;border-color:#e5c69d80;background:#ffffff0b}
 @media(hover:none){.premium-quick-add{transform:none;position:absolute;bottom:9px;left:9px;right:9px;padding:10px 11px;font-size:9px;background:#fffaf5e8}.product-image-caption{display:none}}
 @media(max-width:700px){.premium-product-image{border-radius:2px}.product-card-topline{top:7px;left:7px;right:7px}.premium-product-image .heart{width:30px;height:30px;flex-basis:30px;font-size:18px}.product-card-topline .product-badge{font-size:7px;padding:5px 6px}.premium-product-info{padding-top:10px}.product-rating span{display:none}.product-meta-row{margin-bottom:6px}.premium-product-name{font-size:14px;line-height:1.35}.premium-price-line{gap:6px;font-size:11px}.premium-price-line>b{font-size:12px}.premium-price-line .discount-copy{font-size:8px;padding:3px 4px}.product-card-footer{font-size:8px;margin-top:9px;padding-top:8px}.product-card-footer span:last-child{display:none}.offer-card-grid{grid-template-columns:1fr;gap:10px}.offer-card{min-height:175px;padding:22px}.offer-card h3{font-size:27px}.premium-quick-add{letter-spacing:.08em}}
+
+
+/* Refined luxury merchandising pass — deliberately restrained */
+.premium-product-card,.premium-product-image,.premium-product-info,.premium-product-name,.premium-quick-add,.product-card-topline,.product-image-caption,.product-meta-row,.product-rating,.product-card-footer{all:unset}
+.zarika-card{display:flex;flex-direction:column;min-width:0;position:relative;background:transparent;transition:transform .25s ease}
+.zarika-card:hover{transform:translateY(-3px)}
+.zarika-card-image{position:relative;aspect-ratio:4/5;overflow:hidden;background:#f2e8e1;border-radius:2px;isolation:isolate}
+.zarika-card-image>a{display:block;width:100%;height:100%;overflow:hidden}
+.zarika-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.65,.3,1)}
+.zarika-card:hover .zarika-card-image img{transform:scale(1.035)}
+.zarika-badge{position:absolute;left:11px;top:11px;z-index:2;background:#fffaf4;color:#6e263c;padding:7px 9px;font-size:9px;line-height:1;letter-spacing:.09em;text-transform:uppercase}
+.zarika-discount{background:#75263f;color:#fffaf4}
+.zarika-heart{position:absolute;top:9px;right:9px;z-index:3;width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:50%;background:#fffaf4;color:#4a2a2b;font-size:21px;line-height:1;box-shadow:0 2px 10px #2814160b;transition:background .2s,color .2s}
+.zarika-heart.saved{background:#75263f;color:white}
+.zarika-add{position:absolute;left:10px;right:10px;bottom:10px;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border:0;background:#fffaf4;color:#3a2525;font-size:10px;letter-spacing:.13em;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s}
+.zarika-card:hover .zarika-add,.zarika-add:focus-visible{opacity:1;transform:translateY(0)}
+.zarika-card-info{padding:13px 1px 0}
+.zarika-category{margin:0 0 6px;color:#947c73;font-size:9px;letter-spacing:.15em;text-transform:uppercase}
+.zarika-product-name{display:block;font:400 17px/1.35 var(--serif);color:#302322;letter-spacing:-.01em}
+.zarika-product-name:hover{color:#75263f}
+.zarika-price{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-top:8px;font-size:12px}
+.zarika-price b{font-weight:600;color:#2c2221}
+.zarika-price s{font-size:11px;color:#a2938c}
+.zarika-price span{color:#4e7459;font-size:10px}
+.offer-section{padding-top:48px;padding-bottom:48px}
+.offer-section .section-row{margin-bottom:22px}
+.offer-section .h2{font-size:clamp(28px,3vw,38px)}
+.offer-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.offer-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:230px;padding:27px 25px;background:#f4e8df;border:0;overflow:hidden;transition:transform .25s ease}
+.offer-card:before{content:"";position:absolute;right:-54px;top:-78px;width:190px;height:190px;border:1px solid #b78b544d;border-radius:50%;box-shadow:0 0 0 18px #b78b5409,0 0 0 38px #b78b5406;pointer-events:none}
+.offer-card:after{content:none}
+.offer-card:hover{transform:translateY(-3px);border-color:transparent}
+.offer-card:nth-child(2){background:#eee1d6}
+.offer-card:nth-child(3){background:#682239;color:#fff9f1}
+.offer-card .offer-kicker{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:#7b2340;font-weight:600}
+.offer-card:nth-child(3) .offer-kicker{color:#e8cba8}
+.offer-card h3{position:relative;font:400 clamp(23px,2.3vw,30px)/1.12 var(--serif);max-width:270px;margin:18px 0 9px;letter-spacing:-.025em}
+.offer-card p{position:relative;font-size:12px;line-height:1.7;color:#77645e;max-width:270px;margin:0}
+.offer-card:nth-child(3) p{color:#ead8d7}
+.offer-card .offer-cta{position:relative;display:inline-flex;align-items:center;gap:12px;align-self:flex-start;margin-top:25px;padding-bottom:5px;border-bottom:1px solid #b78b54;font-size:9px;text-transform:uppercase;letter-spacing:.14em}
+.offer-card .offer-code{position:relative;display:inline-block;margin-top:13px;padding:0;border:0;background:transparent;color:#7b2340;font-size:9px;letter-spacing:.12em}
+.offer-card:nth-child(3) .offer-code{color:#f4d9b5}
+@media(hover:none){.zarika-add{opacity:1;transform:none;left:8px;right:8px;bottom:8px;padding:10px 11px;background:#fffaf4ed;font-size:9px}.zarika-card:hover{transform:none}}
+@media(max-width:700px){.zarika-card-image{aspect-ratio:3/4}.zarika-badge{top:7px;left:7px;padding:6px 7px;font-size:8px}.zarika-heart{top:7px;right:7px;width:30px;height:30px;font-size:19px}.zarika-card-info{padding-top:10px}.zarika-category{font-size:8px;margin-bottom:5px}.zarika-product-name{font-size:14px;line-height:1.35}.zarika-price{margin-top:7px;gap:6px;font-size:11px}.zarika-price s{font-size:10px}.zarika-price span{font-size:9px}.offer-section{padding-top:34px;padding-bottom:34px}.offer-card-grid{grid-template-columns:1fr;gap:10px}.offer-card{min-height:185px;padding:23px}.offer-card h3{font-size:27px;margin-top:13px}.offer-card p{font-size:11px}.offer-card .offer-cta{margin-top:18px}}
