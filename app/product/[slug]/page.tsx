@@ -24,7 +24,7 @@ export default async function ProductPage({params}:{params:Promise<{slug:string}
     <div className="lyvora-delivery"><span><i/> In stock</span><span>♧ Get it by <b>Fri, 30 Oct</b></span><span>♔ Earn {Math.max(1,Math.round(p.price/50))} coins</span></div>
     <p className="lyvora-description">{p.description||"A statement piece made for everyday moments and special occasions alike."}</p>
     <div className="lyvora-size-heading"><b>SELECT SIZE <small>· XS</small></b><button>SIZE CHART <span>›</span></button></div>
-    <ProductActions slug={p.slug}/>
+    <ProductActions slug={p.slug} category={p.category}/>
     <div className="lyvora-benefits"><div><span>♧</span><p><b>Free shipping</b><small>On eligible orders</small></p></div><div><span>↻</span><p><b>Easy returns</b><small>7-day return window</small></p></div><div><span>▤</span><p><b>Secure checkout</b><small>Safe payment options</small></p></div></div>
     <details className="lyvora-accordion" open><summary>Product highlights <span>−</span></summary><p>Thoughtfully selected for comfort, versatility and an elevated everyday look.</p></details>
     <details className="lyvora-accordion"><summary>Fabric & care <span>＋</span></summary><p>Please refer to the product label for fabric composition and care instructions.</p></details>
