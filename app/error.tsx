@@ -1,0 +1,2 @@
+"use client";
+export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <div className="page-wrap"><div className="empty-state"><span className="eyebrow">A small hiccup</span><h1>Let’s try that again.</h1><p>Something didn’t load as expected.</p><button className="button button-dark" onClick={()=>reset()}>Try again ↻</button></div></div>}
