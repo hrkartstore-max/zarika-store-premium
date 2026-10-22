@@ -56,3 +56,11 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .demo-confirmation-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .demo-confirmation-actions .button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 @media(max-width:560px){.demo-order-status{align-items:flex-start}.demo-order-status strong{width:100%;margin-left:18px}.demo-confirmation-section{padding:16px 0}.demo-confirmation-actions .button{width:100%}}
+
+
+/* Cart cross-sell section */
+.cart-recommendations{margin:64px 0 24px}
+.cart-recommendations .section-heading{margin-bottom:24px}
+.cart-recommendations .section-heading h2{font:500 clamp(30px,4vw,44px) var(--serif);margin:8px 0}
+.cart-recommendations .section-heading p{color:var(--muted);font-size:13px}
+@media(max-width:760px){.cart-recommendations{margin-top:42px}.cart-recommendations .section-heading{margin-bottom:18px}}
