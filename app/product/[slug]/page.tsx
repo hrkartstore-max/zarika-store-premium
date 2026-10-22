@@ -12,10 +12,10 @@ export default async function ProductPage({params}:{params:Promise<{slug:string}
   <div className="lyvora-breadcrumb"><Link href="/">Home</Link><span>›</span><Link href={"/category/"+p.category.toLowerCase().replaceAll(" ","-")}>{p.category}</Link><span>›</span><span>{p.name}</span></div>
   <div className="lyvora-product">
    <div className="lyvora-gallery">
-    <div className="lyvora-main-image"><img src={p.image} alt={p.imageAlt}/><span className="lyvora-gallery-badge">{p.badge||"ZARIKA EDIT"}</span></div>
+    <div className="lyvora-main-image"><img src={p.image} alt={p.imageAlt}/><span className="lyvora-gallery-badge">{p.badge||"ZARIKA EDIT"}</span><span className="lyvora-image-caption">A little luxury, made for you</span></div>
    </div>
    <div className="lyvora-info">
-    <div className="lyvora-eyebrow">{p.category} <span>·</span> LYVORA EDIT</div>
+    <div className="lyvora-eyebrow">{p.category} <span>·</span> ZARIKA EDIT</div>
     <h1>{p.name}</h1>
     <div className="lyvora-rating"><span>✦</span> <b>Zarika collection</b> <span>·</span> <span>Product details</span></div>
     <div className="lyvora-price"><strong>{money(p.price)}</strong>{p.compareAt&&<><del>{money(p.compareAt)}</del><span className="lyvora-discount">{Math.round((1-p.price/p.compareAt)*100)}% OFF</span></>}</div>
