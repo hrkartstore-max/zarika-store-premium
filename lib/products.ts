@@ -34,3 +34,11 @@ export const categories = [
 export const money = (amount:number) => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(amount);
 export const productBySlug = (slug:string) => products.find(p=>p.slug===slug);
 export const categoryBySlug = (slug:string) => categories.find(c=>c.slug===slug);
+
+export const bulkDiscountRate = (quantity:number) => quantity >= 3 ? 0.10 : quantity >= 2 ? 0.05 : 0;
+export const cartLinePrice = (price:number, quantity:number) => Math.round(price * quantity * (1 - bulkDiscountRate(quantity)));
+export const cartTotals = (lines:{slug:string;quantity:number}[]) => lines.reduce((totals,line)=>{
+ const product=productBySlug(line.slug); if(!product) return totals;
+ const subtotal=product.price*line.quantity; const discount=Math.round(subtotal*bulkDiscountRate(line.quantity));
+ return {subtotal:totals.subtotal+subtotal,discount:totals.discount+discount,total:totals.total+subtotal-discount};
+},{subtotal:0,discount:0,total:0});
