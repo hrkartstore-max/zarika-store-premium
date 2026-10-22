@@ -10,7 +10,7 @@ export function StoreProvider({children}:{children:React.ReactNode}) {
   useEffect(()=>{try{setCart(JSON.parse(localStorage.getItem("zarika-cart")||"[]"));setWishlist(JSON.parse(localStorage.getItem("zarika-wishlist")||"[]"));}catch{}setReady(true);},[]);
   useEffect(()=>{if(ready)localStorage.setItem("zarika-cart",JSON.stringify(cart));},[cart,ready]);
   useEffect(()=>{if(ready)localStorage.setItem("zarika-wishlist",JSON.stringify(wishlist));},[wishlist,ready]);
-  const value = useMemo<StoreContextValue>(()=>({
+  const value = useMemo<Omit<StoreContextValue,"cartCount">>(()=>({
     cart,wishlist,
     addToCart:(slug)=>setCart(old=>{const line=old.find(x=>x.slug===slug);return line?old.map(x=>x.slug===slug?{...x,quantity:x.quantity+1}:x):[...old,{slug,quantity:1}]}),
     removeFromCart:(slug)=>setCart(old=>old.filter(x=>x.slug!==slug)),
