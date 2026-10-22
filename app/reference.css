@@ -546,3 +546,14 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .checkout-error{margin:0 0 16px;padding:13px 15px;border:1px solid #c57b72;background:#fff4f2;color:#842f27;font-size:12px;line-height:1.6}
 .checkout-fieldset :is(input,select):invalid:not(:placeholder-shown){border-color:#b85a50}
 .checkout-fieldset :is(input,select):focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+
+/* Wishlist interaction feedback */
+.wishlist-availability{font-size:10px;line-height:1.45;color:var(--muted);margin:6px 0}
+.wishlist-clear-confirm{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px;padding:15px 17px;border:1px solid var(--line);background:#fffdf9}
+.wishlist-clear-confirm p{flex:1 1 100%;font-size:12px;margin:0 0 3px}
+.wishlist-clear-confirm .button{min-height:40px}
+.wishlist-feedback{margin:18px 0;padding:13px 15px;background:#f8f4ee;border:1px solid var(--line);font-size:12px;line-height:1.6}
+.wishlist-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.wishlist-actions .button{min-height:42px}
+@media(max-width:560px){.wishlist-clear-confirm{align-items:stretch}.wishlist-clear-confirm .button{flex:1 1 100%}.wishlist-actions{gap:8px}.wishlist-actions .button{flex:1 1 auto;min-width:0;padding-inline:12px}}
