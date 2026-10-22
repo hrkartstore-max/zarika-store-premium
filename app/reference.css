@@ -21,3 +21,15 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 @media(max-width:760px){.lyvora-size-modal{padding:24px 18px}.lyvora-size-modal h2{font-size:32px}}
 
 .lyvora-gallery-badge{font-weight:600;color:#5b3c47}.lyvora-image-count{font-variant-numeric:tabular-nums}.lyvora-thumbnails button{transition:border-color .2s,transform .2s}.lyvora-thumbnails button:focus-visible,.lyvora-sizes button:focus-visible,.lyvora-sticky-buy button:focus-visible{outline:2px solid #8b1e3f;outline-offset:3px}.lyvora-description{white-space:pre-line}.lyvora-accordion summary{padding:2px 0}.lyvora-related .section-row{align-items:end}
+
+
+/* Purchase controls: visible on desktop, compact sticky controls on mobile */
+.lyvora-desktop-buy{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 24px}
+.lyvora-desktop-buy button{min-height:56px;border-radius:32px;font-size:14px;font-weight:600;transition:transform .18s,background .18s}
+.lyvora-desktop-buy button:hover{transform:translateY(-1px)}
+.lyvora-desktop-buy .lyvora-add{border:1px solid #291132;background:white;color:#291132}
+.lyvora-desktop-buy .lyvora-buy{border:1px solid #291132;background:#291132;color:white}
+.lyvora-desktop-buy .lyvora-buy span{padding-left:8px}
+.lyvora-sticky-buy .lyvora-buy span{padding-left:8px}
+@media(max-width:760px){.lyvora-desktop-buy{display:none}}
+@media(min-width:761px){.lyvora-sticky-buy{display:none}}
