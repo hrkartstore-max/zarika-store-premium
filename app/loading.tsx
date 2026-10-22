@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="page-wrap"><div className="empty-state"><span className="eyebrow">Zarika Studio</span><h1>Gathering lovely things…</h1><p>One moment while the collection comes together.</p></div></div>}
