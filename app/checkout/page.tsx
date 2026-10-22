@@ -3,10 +3,14 @@ import Link from "next/link";
 import {FormEvent,useEffect,useState} from "react";
 import {money,productBySlug,cartTotals,bulkDiscountRate} from "@/lib/products";
 import {useStore} from "@/lib/store";
-type SavedAddress={label:string;recipient:string;phone:string;line1:string;line2:string;city:string;state:string;pin:string};\ntype DemoOrder={reference:string;name:string;phone:string;email:string;address:string;address2:string;city:string;state:string;pin:string;payment:string;items:{key:string;name:string;size:string;quantity:number;lineTotal:number}[];subtotal:number;discount:number;total:number};
+type SavedAddress={label:string;recipient:string;phone:string;line1:string;line2:string;city:string;state:string;pin:string};
+type DemoOrder={reference:string;name:string;phone:string;email:string;address:string;address2:string;city:string;state:string;pin:string;payment:string;items:{key:string;name:string;size:string;quantity:number;lineTotal:number}[];subtotal:number;discount:number;total:number};
 export default function CheckoutPage(){
  const {cart,clearCart}=useStore();
- const [demoOrder,setDemoOrder]=useState<DemoOrder|null>(null);\n const [savedAddresses,setSavedAddresses]=useState<SavedAddress[]>([]);\n useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem("zarika-demo-addresses-v1")||"[]");if(Array.isArray(saved))setSavedAddresses(saved);}catch{}},[]);\n function fillSavedAddress(value:string){const address=savedAddresses[Number(value)];if(!address)return;const fields:{[key:string]:string}={name:address.recipient,phone:address.phone,address:address.line1,address2:address.line2,city:address.city,state:address.state,pin:address.pin};Object.entries(fields).forEach(([id,value])=>{const element=document.getElementById(id) as HTMLInputElement|null;if(element)element.value=value;});}
+ const [demoOrder,setDemoOrder]=useState<DemoOrder|null>(null);
+ const [savedAddresses,setSavedAddresses]=useState<SavedAddress[]>([]);
+ useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem("zarika-demo-addresses-v1")||"[]");if(Array.isArray(saved))setSavedAddresses(saved);}catch{}},[]);
+ function fillSavedAddress(value:string){const address=savedAddresses[Number(value)];if(!address)return;const fields:{[key:string]:string}={name:address.recipient,phone:address.phone,address:address.line1,address2:address.line2,city:address.city,state:address.state,pin:address.pin};Object.entries(fields).forEach(([id,value])=>{const element=document.getElementById(id) as HTMLInputElement|null;if(element)element.value=value;});}
  const totals=cartTotals(cart);
  const total=totals.total;
  function submit(e:FormEvent<HTMLFormElement>){
