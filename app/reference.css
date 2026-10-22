@@ -540,3 +540,9 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
  .demo-confirmation .cart-total{font-size:12px}
  .demo-confirmation-actions{gap:9px}
 }
+
+
+/* Checkout validation feedback */
+.checkout-error{margin:0 0 16px;padding:13px 15px;border:1px solid #c57b72;background:#fff4f2;color:#842f27;font-size:12px;line-height:1.6}
+.checkout-fieldset :is(input,select):invalid:not(:placeholder-shown){border-color:#b85a50}
+.checkout-fieldset :is(input,select):focus-visible{outline:2px solid var(--wine);outline-offset:2px}
