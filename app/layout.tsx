@@ -3,6 +3,7 @@ import "./globals.css";
 import "./reference.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CartDrawer from "@/components/CartDrawer";
 import {StoreProvider} from "@/lib/store";
 export const metadata:Metadata={
  title:{default:"Zarika — Sarees, Co-ords & Jewellery Seen on Instagram",template:"%s | Zarika"},
@@ -11,4 +12,4 @@ export const metadata:Metadata={
  openGraph:{siteName:"Zarika",type:"website",title:"Zarika — Sarees, Co-ords & Jewellery Seen on Instagram",description:"Sarees, co-ords, festive clothing and jewellery, styled on Instagram and delivered across India."}
 };
 export const viewport:Viewport={themeColor:"#8b1e3f",width:"device-width",initialScale:1};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><StoreProvider><Header/><main>{children}</main><Footer/></StoreProvider></body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><StoreProvider><Header/><main>{children}</main><Footer/><CartDrawer/></StoreProvider></body></html>}
