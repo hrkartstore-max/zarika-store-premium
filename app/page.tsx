@@ -4,16 +4,16 @@ import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import {categories,products} from "@/lib/products";
 const reels=[
- ["emerald-silk-saree","Twirl-ready in emerald silk","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/9xy1C87W72ONYCMsgEYsJTChO7l0nWqF-7ztzdy-200.avif","₹2,999"],
- ["ikat-bloom-co-ord","Brunch fit: the Ikat Bloom set","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/Y5czlvHLr84RatGOdxdmCoJN49rmfVjm-p4yrbs-200.avif","₹1,699"],
- ["sky-blue-net-lehenga","Sangeet night, sorted","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/nW0LGZaWIiCcq8Z4bdMBNxAocK55ho8B-ntvv6r-200.avif","₹6,999"],
- ["crimson-embroidered-co-ord","Festive but comfy","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/4ksliX4TSJLvIXT93vWFRUso5AOaD5ow-s3nlkb-200.avif","₹1,899"],
+ ["emerald-silk-saree","Twirl-ready in emerald silk","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/9xy1C87W72ONYCMsgEYsJTChO7l0nWqF.jpg","₹2,999"],
+ ["ikat-bloom-co-ord","Brunch fit: the Ikat Bloom set","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/Y5czlvHLr84RatGOdxdmCoJN49rmfVjm.jpg","₹1,699"],
+ ["sky-blue-net-lehenga","Sangeet night, sorted","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/nW0LGZaWIiCcq8Z4bdMBNxAocK55ho8B.jpg","₹6,999"],
+ ["crimson-embroidered-co-ord","Festive but comfy","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/4ksliX4TSJLvIXT93vWFRUso5AOaD5ow.jpg","₹1,899"],
  ["red-banarasi-saree","Banarasi drape in 60 seconds","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/C1j4R1KzqVvigW6BRttyfCf5VbfCKObn.jpg","₹4,299"],
- ["kalamkari-silk-saree","Kalamkari, but make it casual","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/ZdTkPE5tFIWoxPcB0w7ZjZ83lQoyRF13-crqfl2-200.avif","₹2,799"]
+ ["kalamkari-silk-saree","Kalamkari, but make it casual","https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/ZdTkPE5tFIWoxPcB0w7ZjZ83lQoyRF13.jpg","₹2,799"]
 ];
 const steps=[["01","Pick your favourite","Tap a reel or browse — choose your size and add to cart."],["02","Pay your way","UPI, cards or Cash on Delivery — whatever you like."],["03","Packed with love","We check, pack and ship your order within 48 hours."],["04","Track to your door","Follow your parcel with the tracking link we send you."]];
 const reviews=[["PS","Priya S.","Lucknow","Saw the Ikat set on a reel, ordered with COD and it reached in four days. The fabric is even better than the video!"],["RM","Ritika M.","Kolkata","The red Banarasi was perfect for my cousin’s wedding. Packed beautifully, with a little thank-you note."],["AK","Aisha K.","Hyderabad","Ordered jhumkas for the whole bridesmaid gang — exactly like the photos, and super light to wear."]];
-const banners=[{href:"/category/festive-edit",img:"https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/ikLo64IVX25JEtaxAKED28dkEszJ2n2Y-faiisz-200.avif",title:"Wedding Season Lehengas & Bridal Sets",text:"Sangeet, mehendi and the big day — from ₹6,999.",cta:"Shop Festive Edit"},{href:"/category/under-999",img:"https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/UbPhBM5SSiqBbQq5Zo3jMqSLSh4MyT52-hva4xy-200.avif",title:"Jewellery Edit: Jhumkas Under ₹999",text:"Temple, oxidised and kundan.",cta:"Shop Under ₹999",light:true}];
+const banners=[{href:"/category/festive-edit",img:"https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/ikLo64IVX25JEtaxAKED28dkEszJ2n2Y.jpg",title:"Wedding Season Lehengas & Bridal Sets",text:"Sangeet, mehendi and the big day — from ₹6,999.",cta:"Shop Festive Edit"},{href:"/category/under-999",img:"https://shipauk.com/storage/merchants/6eb4b413-87cf-4217-80c3-273ad9d70880/2026/10/UbPhBM5SSiqBbQq5Zo3jMqSLSh4MyT52.jpg",title:"Jewellery Edit: Jhumkas Under ₹999",text:"Temple, oxidised and kundan.",cta:"Shop Under ₹999",light:true}];
 export default function Home(){
  const highlights=categories.slice(0,8);
  const arrivals=products.slice(0,8);
