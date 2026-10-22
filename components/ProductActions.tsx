@@ -7,7 +7,7 @@ export default function ProductActions({slug}:{slug:string}){
  const [qty,setQty]=useState(1);
  const [notice,setNotice]=useState("");
  const saved=wishlist.includes(slug);
- const add=()=>{addToCart(slug);setNotice("Added to your bag");};
+ const add=()=>{addToCart(slug,qty);setNotice(`Added ${qty} item${qty===1?"":"s"} to your bag`);};
  return <div className="lyvora-actions">
   <div className="lyvora-sizes" role="group" aria-label="Select size">{["XS","S","M","L","XL"].map(s=><button key={s} className={size===s?"selected":""} onClick={()=>setSize(s)} aria-pressed={size===s}>{s}</button>)}</div>
   <button className="lyvora-find-size" onClick={()=>setNotice("For the best fit, compare your measurements with the size chart.")}>⌁ <span>Find my size</span></button>
