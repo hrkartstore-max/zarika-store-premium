@@ -42,3 +42,17 @@ body{font-family:var(--sans);background:#fff;color:var(--ink)}a{color:inherit;te
 .checkout-fieldset .form-grid{margin-top:2px}
 .checkout-fieldset input:focus-visible,.checkout-fieldset select:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
 @media(max-width:760px){.checkout-fieldset{padding:15px;margin-bottom:16px}.checkout-fieldset legend{font-size:23px}}
+
+
+/* Demo checkout confirmation */
+.demo-confirmation{max-width:820px;margin-inline:auto}
+.demo-order-status{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid #d8c8ad;background:#f8f0e3;padding:14px 16px;font-size:11px;letter-spacing:.08em;font-weight:700}
+.demo-order-status strong{margin-left:auto;font-size:13px;letter-spacing:.04em;color:var(--wine)}
+.demo-status-dot{width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#a66b32}
+.demo-confirmation .checkout-summary{margin-top:22px}
+.demo-confirmation-section{border-top:1px solid var(--line);padding:20px 0}
+.demo-confirmation-section h2{font:500 25px var(--serif);margin:0 0 12px}
+.demo-confirmation-section p{margin:5px 0;font-size:13px;line-height:1.6}
+.demo-confirmation-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.demo-confirmation-actions .button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+@media(max-width:560px){.demo-order-status{align-items:flex-start}.demo-order-status strong{width:100%;margin-left:18px}.demo-confirmation-section{padding:16px 0}.demo-confirmation-actions .button{width:100%}}
