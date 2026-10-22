@@ -1,0 +1,12 @@
+import {notFound} from "next/navigation";
+import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
+import ProductActions from "@/components/ProductActions";
+import {products,productBySlug,money} from "@/lib/products";
+export function generateStaticParams(){return products.map(p=>({slug:p.slug}));}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=productBySlug(slug);return {title:p?.name||"Product",description:p?.description};}
+export default async function ProductPage({params}:{params:Promise<{slug:string}>}){
+ const {slug}=await params;const p=productBySlug(slug);if(!p)notFound();
+ const related=products.filter(x=>x.category===p.category&&x.slug!==p.slug).slice(0,4);
+ return <div className="page-wrap"><div className="crumb"><Link href="/">Home</Link> / <Link href={"/category/"+p.category.toLowerCase().replaceAll(" ","-")}>{p.category}</Link> / {p.name}</div><div className="product-detail"><div className="detail-image"><img src={p.image} alt={p.imageAlt}/></div><div className="detail-copy"><span className="eyebrow">{p.category} · Zarika Studio</span><h1>{p.name}</h1><div className="detail-price"><b>{money(p.price)}</b>{p.compareAt&&<s>{money(p.compareAt)}</s>}{p.compareAt&&<span className="off">{Math.round((1-p.price/p.compareAt)*100)}% off</span>}</div><p className="description">{p.description}</p><div className="notice">A little note: colours may look slightly different depending on your screen. Please check the product details before ordering.</div><label htmlFor="size">Size / fit</label><select id="size" defaultValue="Free size"><option>Free size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><ProductActions slug={p.slug}/><p className="site-note">This storefront demo does not confirm live inventory or process real payments. Final shipping, availability and return terms must be confirmed by the store.</p></div></div>{related.length>0&&<section className="section"><div className="section-row"><div><span className="eyebrow">You may also love</span><h2>More from {p.category}</h2></div></div><div className="product-grid">{related.map(item=><ProductCard key={item.slug} product={item}/>)}</div></section>}</div>;
+}
