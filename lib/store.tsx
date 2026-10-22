@@ -1,7 +1,7 @@
 "use client";
 import {createContext,useContext,useEffect,useMemo,useState} from "react";
 type CartLine={slug:string;quantity:number};
-type StoreContextValue={cart:CartLine[];wishlist:string[];addToCart:(slug:string)=>void;removeFromCart:(slug:string)=>void;setQuantity:(slug:string,quantity:number)=>void;toggleWishlist:(slug:string)=>void;clearCart:()=>void;cartCount:number;drawerOpen:boolean;setDrawer:(open:boolean)=>void};
+type StoreContextValue={cart:CartLine[];wishlist:string[];addToCart:(slug:string,quantity?:number)=>void;removeFromCart:(slug:string)=>void;setQuantity:(slug:string,quantity:number)=>void;toggleWishlist:(slug:string)=>void;clearCart:()=>void;cartCount:number;drawerOpen:boolean;setDrawer:(open:boolean)=>void};
 const StoreContext=createContext<StoreContextValue|null>(null);
 export function StoreProvider({children}:{children:React.ReactNode}){
  const [cart,setCart]=useState<CartLine[]>([]);const [wishlist,setWishlist]=useState<string[]>([]);const [ready,setReady]=useState(false);const [drawerOpen,setDrawer]=useState(false);
@@ -10,7 +10,7 @@ export function StoreProvider({children}:{children:React.ReactNode}){
  useEffect(()=>{if(ready)localStorage.setItem("zarika-wishlist",JSON.stringify(wishlist));},[wishlist,ready]);
  const value=useMemo<Omit<StoreContextValue,"cartCount"|"drawerOpen"|"setDrawer">>(()=>({
  cart,wishlist,
- addToCart:(slug)=>{setCart(old=>{const line=old.find(x=>x.slug===slug);return line?old.map(x=>x.slug===slug?{...x,quantity:x.quantity+1}:x):[...old,{slug,quantity:1}]});setDrawer(true);},
+ addToCart:(slug,quantity=1)=>{const safeQuantity=Math.max(1,Math.min(10,Math.floor(quantity)||1));setCart(old=>{const line=old.find(x=>x.slug===slug);return line?old.map(x=>x.slug===slug?{...x,quantity:x.quantity+safeQuantity}:x):[...old,{slug,quantity:safeQuantity}]});setDrawer(true);},
  removeFromCart:(slug)=>setCart(old=>old.filter(x=>x.slug!==slug)),
  setQuantity:(slug,quantity)=>setCart(old=>quantity<1?old.filter(x=>x.slug!==slug):old.map(x=>x.slug===slug?{...x,quantity}:x)),
  toggleWishlist:(slug)=>setWishlist(old=>old.includes(slug)?old.filter(x=>x!==slug):[...old,slug]),
