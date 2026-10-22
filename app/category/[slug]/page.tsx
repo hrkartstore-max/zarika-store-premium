@@ -2,6 +2,7 @@ import {notFound} from "next/navigation";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import {categories,products} from "@/lib/products";
+import CollectionControls from "@/components/CollectionControls";
 export function generateStaticParams(){return categories.map(c=>({slug:c.slug}));}
 export default async function CategoryPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const category=categories.find(c=>c.slug===slug);if(!category)notFound();
@@ -15,5 +16,5 @@ export default async function CategoryPage({params}:{params:Promise<{slug:string
  else if(slug==="clothing")items=products.filter(p=>p.category!=="Jewellery");
  else if(slug==="jewellery")items=products.filter(p=>p.category==="Jewellery");
  else items=products.filter(p=>p.category.toLowerCase().replaceAll(" ","-")===slug);
- return <div className="page-wrap"><div className="page-heading"><div className="crumb"><Link href="/">Home</Link> / {category.name}</div><span className="eyebrow">The Zarika edit</span><h1>{category.name}</h1><p>{category.note||"A considered collection of favourites, chosen for your next lovely moment."}</p></div><div className="product-grid">{items.map(p=><ProductCard key={p.slug} product={p}/>)}</div>{items.length===0&&<div className="empty-state"><h1>Something lovely is coming.</h1><p>We’re refreshing this collection. Explore our latest arrivals in the meantime.</p><Link className="button button-dark" href="/category/new-arrivals">Shop new arrivals</Link></div>}</div>;
+ return <div className="page-wrap collection-page"><div className="page-heading"><div className="crumb"><Link href="/">Home</Link> / {category.name}</div><span className="eyebrow">The Zarika edit</span><h1>{category.name}</h1><p>{category.note||"A considered collection of favourites, chosen for your next lovely moment."}</p></div><CollectionControls products={items}/>{items.length===0&&<div className="empty-state"><h1>Something lovely is coming.</h1><p>We’re refreshing this collection. Explore our latest arrivals in the meantime.</p><Link className="button button-dark" href="/category/new-arrivals">Shop new arrivals</Link></div>}</div>;
 }
