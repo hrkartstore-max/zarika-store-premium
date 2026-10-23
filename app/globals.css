@@ -55,3 +55,70 @@
 .offer-card:nth-child(3) .offer-code{color:#f4d9b5;border-color:#e5c69d80;background:#ffffff0b}
 @media(hover:none){.premium-quick-add{transform:none;position:absolute;bottom:9px;left:9px;right:9px;padding:10px 11px;font-size:9px;background:#fffaf5e8}.product-image-caption{display:none}}
 @media(max-width:700px){.premium-product-image{border-radius:2px}.product-card-topline{top:7px;left:7px;right:7px}.premium-product-image .heart{width:30px;height:30px;flex-basis:30px;font-size:18px}.product-card-topline .product-badge{font-size:7px;padding:5px 6px}.premium-product-info{padding-top:10px}.product-rating span{display:none}.product-meta-row{margin-bottom:6px}.premium-product-name{font-size:14px;line-height:1.35}.premium-price-line{gap:6px;font-size:11px}.premium-price-line>b{font-size:12px}.premium-price-line .discount-copy{font-size:8px;padding:3px 4px}.product-card-footer{font-size:8px;margin-top:9px;padding-top:8px}.product-card-footer span:last-child{display:none}.offer-card-grid{grid-template-columns:1fr;gap:10px}.offer-card{min-height:175px;padding:22px}.offer-card h3{font-size:27px}.premium-quick-add{letter-spacing:.08em}}
+
+
+/* Zarika Store — Deep Purple / Lavender visual system */
+:root{
+  --ink:#0D0D0D;
+  --muted:#625b70;
+  --wine:#433075;
+  --wine-dark:#30204f;
+  --rose:#eee8ff;
+  --cream:#FAFAFA;
+  --line:#e5def5;
+  --gold:#A58CF4;
+  --green:#386b50;
+}
+.announcement{background:#30204f;color:#FAFAFA}
+.announcement span{color:#A58CF4}
+.header{background:#FAFAFAed;border-bottom-color:#e5def5}
+.brand-mark{border-color:#A58CF4;color:#433075}
+.brand small{color:#625b70}
+.nav a:hover,.premium-product-name:hover{color:#433075}
+.hero-panel{background:#eee8ff}
+.hero-copy{background:radial-gradient(ellipse at 10% 20%,#FAFAFA 0,transparent 45%),linear-gradient(135deg,#eee8ff,#d8cafa)}
+.hero h1 em,.eyebrow{color:#433075}
+.hero-copy p{color:#625b70}
+.button-dark,.search-form button{background:#433075;color:#FAFAFA}
+.button-dark:hover{background:#30204f}
+.button-outline{border-color:#e5def5;color:#433075}
+.category-tile,.product-image,.detail-image{background:#eee8ff}
+.product-badge{background:#FAFAFAed;color:#433075}
+.heart{color:#433075;background:#FAFAFAed}
+.heart.saved{background:#433075;color:#FAFAFA}
+.editorial{background:#eee8ff}
+.editorial-copy p{color:#625b70}
+.promise-strip{background:#FAFAFA;border-color:#e5def5}
+.promise{border-color:#e5def5}
+.newsletter{background:#30204f;color:#FAFAFA}
+.newsletter p{color:#e2daf7}
+.newsletter input{border-color:#A58CF4}
+.newsletter button{background:#A58CF4;color:#24183f}
+.footer{background:#f0ecf8}
+.footer-grid a,.footer-grid p{color:#625b70}
+.footer-bottom{border-color:#e0d7f2;color:#756b89}
+.detail-copy select,.form-field,.search-form input{background:#FAFAFA;border-color:#e5def5;color:#0D0D0D}
+.quantity button{border-color:#e5def5;background:#FAFAFA;color:#433075}
+.premium-product-image{background:linear-gradient(145deg,#f1edfb,#e3dafa)}
+.premium-product-image .heart{color:#433075}
+.premium-quick-add{background:#FAFAFAf2;border-color:#fff}
+.premium-quick-add:hover{background:#433075;color:#FAFAFA}
+.product-card-footer{border-top-color:#e5def5;color:#756b89}
+.offer-card{background:#eee8ff;border-color:#e0d7f2}
+.offer-card:nth-child(2){background:#f7f4ff}
+.offer-card:nth-child(3){background:#433075;color:#FAFAFA;border-color:#433075}
+.offer-card .offer-kicker{color:#433075}
+.offer-card:nth-child(3) .offer-kicker{color:#A58CF4}
+.offer-card p{color:#625b70}
+.offer-card:nth-child(3) p{color:#e4dcf7}
+.offer-card .offer-code{border-color:#A58CF4;color:#433075;background:#FAFAFA7a}
+.offer-card:nth-child(3) .offer-code{color:#A58CF4;border-color:#A58CF4;background:#ffffff0b}
+.product-card-topline .sale-badge{background:#433075;color:#FAFAFA}
+.product-meta-row .product-category{color:#756b89}
+.premium-price-line .discount-copy{background:#eee8ff;color:#433075}
+.notice{background:#f0ecf8;border-color:#d8cafa;color:#433075}
+@media(max-width:700px){
+  .nav{background:#FAFAFA;border-bottom-color:#e5def5}
+  .nav a{border-bottom-color:#e5def5}
+  .hero-copy{background:radial-gradient(ellipse at 10% 20%,#FAFAFA 0,transparent 45%),linear-gradient(135deg,#eee8ff,#d8cafa)}
+}
