@@ -3,12 +3,19 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import ProductActions from "@/components/ProductActions";
 import {products,productBySlug,money} from "@/lib/products";
+import {getCanonicalUrl,site} from "@/lib/site";
 export function generateStaticParams(){return products.map(p=>({slug:p.slug}));}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=productBySlug(slug);return {title:p?.name||"Product",description:p?.description};}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}) {
+ const {slug}=await params; const p=productBySlug(slug);
+ if(!p) return {title:"Product not found",robots:{index:false,follow:false}};
+ const url=getCanonicalUrl("/product/"+p.slug);
+ return {title:p.name,description:p.description,alternates:{canonical:url},openGraph:{type:"website",siteName:site.name,title:p.name,description:p.description,url,images:[{url:p.image,alt:p.imageAlt}]},twitter:{card:"summary_large_image",title:p.name,description:p.description,images:[p.image]}};
+}
 export default async function ProductPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const p=productBySlug(slug);if(!p)notFound();
  const related=products.filter(x=>x.category===p.category&&x.slug!==p.slug).slice(0,4);
- return <div className="lyvora-page">
+ const productJsonLd = {"@context":"https://schema.org","@type":"Product","name":p.name,"description":p.description,"image":[p.image],"sku":p.slug,"category":p.category,"brand":{"@type":"Brand","name":"Zarika"},"offers":{"@type":"Offer","url":getCanonicalUrl("/product/"+p.slug),"priceCurrency":"INR","price":p.price,"availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition"}};
+ return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(productJsonLd).replace(/</g, "\\u003c")}}/><div className="lyvora-page">
   <div className="lyvora-breadcrumb"><Link href="/">Home</Link><span>›</span><Link href={"/category/"+p.category.toLowerCase().replaceAll(" ","-")}>{p.category}</Link><span>›</span><span>{p.name}</span></div>
   <div className="lyvora-product">
    <div className="lyvora-gallery">
@@ -31,5 +38,5 @@ export default async function ProductPage({params}:{params:Promise<{slug:string}
    </div>
   </div>
   {related.length>0&&<section className="section lyvora-related" id="reviews"><div className="section-row"><div><span className="eyebrow">COMPLETE THE LOOK</span><h2>You may also love</h2></div><Link href={"/category/"+p.category.toLowerCase().replaceAll(" ","-")}>View all →</Link></div><div className="product-grid">{related.map(item=><ProductCard key={item.slug} product={item}/>)}</div></section>}
- </div>;
+ </div></>;
 }
