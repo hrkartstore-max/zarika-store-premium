@@ -92,3 +92,74 @@ html{scroll-behavior:smooth;background:#FAFAFA}body{margin:0;background:#FAFAFA;
  .lyvora-sticky-buy{display:none}
  .lyvora-related{padding:45px 15px}
 }
+
+/* Zarika typography upgrade — premium editorial hierarchy, responsive scale */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{--sans:'Manrope','DM Sans',Arial,sans-serif;--serif:'Playfair Display',Georgia,serif;--type-body:14px;--type-small:12px;--type-label:10px}
+body{font-family:var(--sans);font-size:var(--type-body);line-height:1.65;letter-spacing:-.012em;font-weight:400}
+button,input,select,textarea{font-family:var(--sans)}
+/* Global editorial headings */
+.h2,.section-head h2,.section-title,.section-row h2,.editorial-copy h2,.page-heading h1,.empty-state h1,.detail-copy h1{font-family:var(--serif);font-weight:400;letter-spacing:-.035em;line-height:1.12}
+.section-head h2,.section-title,.section-row h2{font-size:clamp(30px,3.2vw,44px)}
+.section-head p,.lead,.editorial-copy p{font-size:13px;line-height:1.8;letter-spacing:0}
+.eyebrow,.ref-kicker{font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.18em;line-height:1.5}
+.reference-header .nav-item>a{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.015em}
+.announce{font-size:10px;font-weight:600;letter-spacing:.055em}
+.product-meta-row .product-category{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.premium-product-name{font-family:var(--serif);font-weight:500;font-size:clamp(16px,1.45vw,20px);line-height:1.35;letter-spacing:-.015em}
+.premium-price-line>b{font-family:var(--sans);font-size:14px;font-weight:800;letter-spacing:-.025em}
+.premium-price-line>s{font-size:11px}
+.product-card-footer{font-size:10px;line-height:1.5;letter-spacing:.005em}
+.category-label strong{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.1}
+.ref-slide h1{font-family:var(--serif);font-weight:400;letter-spacing:-.045em;line-height:.99}
+.ref-sub{font-size:clamp(13px,1.2vw,16px);line-height:1.8;letter-spacing:0}
+.button,.btn-gold,.btn-ghost{font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.trust-in b,.promise b{font-size:12px;font-weight:800;letter-spacing:-.01em}
+.trust-in div>span:last-child,.promise span{font-size:10px;line-height:1.55}
+.footer-grid h4{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.footer-grid a,.footer-grid p{font-size:12px;line-height:1.8}
+.newsletter p{font-size:13px;line-height:1.8}
+.page-heading h1{font-size:clamp(34px,4vw,52px)}
+.page-heading p{font-size:13px;line-height:1.8}
+.lyvora-breadcrumb{font-size:11px;line-height:1.6;letter-spacing:0}
+.lyvora-eyebrow{font-size:10px;font-weight:800;letter-spacing:.17em}
+.lyvora-info h1{font-family:var(--serif);font-size:clamp(34px,3.4vw,49px);font-weight:400;line-height:1.08;letter-spacing:-.04em}
+.lyvora-rating{font-size:12px;line-height:1.6}
+.lyvora-price strong{font-size:clamp(23px,2vw,27px);font-weight:700;letter-spacing:-.04em}
+.lyvora-price del{font-size:14px}
+.lyvora-discount{font-size:10px;font-weight:800;letter-spacing:.07em}
+.lyvora-tax,.lyvora-delivery{font-size:12px;line-height:1.65}
+.lyvora-description{font-size:14px;line-height:1.9;letter-spacing:0}
+.lyvora-size-heading>b{font-size:11px;font-weight:800;letter-spacing:.1em}
+.lyvora-size-heading small{font-size:11px}
+.lyvora-size-heading>button,.lyvora-find-size{font-size:10px;font-weight:800;letter-spacing:.07em}
+.lyvora-sizes button{font-size:13px;font-weight:700}
+.lyvora-wholesale{font-size:12px;font-weight:700}
+.lyvora-bulk-head{font-size:12px;font-weight:700}
+.lyvora-bulk>button{font-size:12px;line-height:1.5}
+.lyvora-bulk>button>span{font-size:10px;font-weight:800}
+.lyvora-bulk>small{font-size:11px;line-height:1.6}
+.lyvora-quantity{font-size:12px}
+.lyvora-quantity b{font-size:13px;font-weight:800}
+.lyvora-quick-actions button{font-size:12px;font-weight:600;line-height:1.4}
+.lyvora-action-notice{font-size:12px;line-height:1.65}
+.lyvora-desktop-buy button,.lyvora-sticky-buy button{font-size:11px;font-weight:800;letter-spacing:.1em}
+.lyvora-benefits p b{font-size:12px;font-weight:800;letter-spacing:-.01em}
+.lyvora-benefits p small{font-size:11px;line-height:1.55}
+.lyvora-accordion summary{font-size:13px;font-weight:700;line-height:1.5}
+.lyvora-accordion p{font-size:12px;line-height:1.8}
+.lyvora-demo-note{font-size:11px;line-height:1.75}
+.lyvora-related .section-row h2{font-size:clamp(30px,3vw,42px)}
+@media(max-width:700px){
+ body{font-size:14px}
+ .h2{font-size:34px}
+ .premium-product-name{font-size:16px;line-height:1.35}
+ .premium-price-line>b{font-size:13px}
+ .product-card-footer{font-size:9px}
+ .ref-slide h1{font-size:clamp(42px,12vw,58px);line-height:1.01}
+ .lyvora-info h1{font-size:clamp(33px,8.5vw,40px);line-height:1.08}
+ .lyvora-description{font-size:13px;line-height:1.85}
+ .lyvora-tax,.lyvora-delivery{font-size:12px}
+ .lyvora-quick-actions button{font-size:11px}
+ .lyvora-demo-note{font-size:10px}
+}
