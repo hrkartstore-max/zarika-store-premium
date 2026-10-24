@@ -163,3 +163,60 @@ button,input,select,textarea{font-family:var(--sans)}
  .lyvora-quick-actions button{font-size:11px}
  .lyvora-demo-note{font-size:10px}
 }
+
+/* Full-site palette harmonisation — Deep Purple / Lavender / Soft White / Jet Black */
+:root{
+ --ink:#0D0D0D;--muted:#696274;--wine:#433075;--wine-dark:#30204f;
+ --rose:#eee8ff;--cream:#FAFAFA;--line:#e7e1f2;--gold:#A58CF4;
+ --green:#433075;--zarika-purple:#433075;--zarika-lavender:#A58CF4;
+ --zarika-white:#FAFAFA;--zarika-black:#0D0D0D;
+ --surface:#FAFAFA;--surface-soft:#f1eef8;--surface-lavender:#eee8ff;
+ --text-primary:#0D0D0D;--text-secondary:#696274;--border-subtle:#e7e1f2;
+}
+html,body{background:#FAFAFA;color:#0D0D0D}
+body{accent-color:#433075}
+a:hover{color:#6d4ac1}
+:focus-visible{outline-color:#A58CF4}
+::selection{background:#A58CF4;color:#30204f}
+input,select,textarea{accent-color:#433075}
+input:focus,select:focus,textarea:focus{border-color:#A58CF4!important;box-shadow:0 0 0 3px #A58CF426;outline:none}
+hr,.divider,.border,.cart-line,.product-card-footer,.footer-bottom{border-color:#e7e1f2}
+.announcement,.announce,.editorial-marquee{background:#30204f;color:#FAFAFA}
+.announcement span,.announce-c{color:#A58CF4}
+.header,.reference-header{background:#FAFAFAf5;border-color:#e7e1f2}
+.hero-panel,.hero-copy{background:#eee8ff}
+.hero-copy{background:radial-gradient(ellipse at 10% 20%,#FAFAFA 0,transparent 48%),linear-gradient(135deg,#eee8ff,#e4d9ff)}
+.hero h1 em,.hero .eyebrow,.text-link,.eyebrow{color:#6d4ac1}
+.hero-copy p,.section-head p,.lead,.editorial-copy p{color:#696274}
+.button-dark,.button-primary,.btn-primary,.search-m button,.search-form button{background:#433075;border-color:#433075;color:#FAFAFA}
+.button-dark:hover,.button-primary:hover,.btn-primary:hover,.search-m button:hover,.search-form button:hover{background:#30204f;border-color:#30204f}
+.button-outline,.btn-outline{border-color:#A58CF4;color:#433075;background:transparent}
+.button-outline:hover,.btn-outline:hover{background:#eee8ff;color:#30204f}
+.product-badge,.tag,.notice,.site-note{background:#eee8ff;color:#433075;border-color:#d8cafa}
+.tag-sale,.sale-badge,.dot{background:#433075;color:#FAFAFA}
+.heart,.icon-btn,.icon-link{color:#433075}
+.heart:hover,.icon-btn:hover{background:#eee8ff;color:#30204f}
+.heart.saved{background:#433075;color:#FAFAFA}
+.category-tile,.product-image,.detail-image{background:#eee8ff}
+.product-rating,.rating,.discount-copy,.premium-price-line .discount-copy{color:#433075}
+.premium-price-line .discount-copy{background:#eee8ff}
+.editorial{background:#eee8ff}
+.promise-strip,.trust,.trust-bar{background:#f1eef8;border-color:#e7e1f2}
+.trust-icon,.footer-grid h4,.footer-grid a:hover,.footer-grid .footer-link:hover{color:#433075}
+.newsletter,.footer-dark{background:#30204f;color:#FAFAFA}
+.newsletter p,.footer-dark p{color:#e5def4}
+.newsletter input{background:#FAFAFA;color:#0D0D0D;border-color:#A58CF4}
+.newsletter button{background:#A58CF4;color:#30204f}
+.footer{background:#f1eef8;color:#30204f}
+.footer-grid a,.footer-grid p,.footer-bottom{color:#696274}
+.form-field,.detail-copy select,.search-d,.search-m input,.form-input{background:#FAFAFA;border-color:#e1d9f0;color:#0D0D0D}
+.notice{background:#f1eef8;color:#433075;border-color:#d8cafa}
+.lyvora-main-image,.lyvora-bulk,.lyvora-sizes button:not(.selected),.lyvora-quick-actions button{background-color:#FAFAFA}
+.lyvora-info h1,.lyvora-accordion summary,.lyvora-benefits p b{color:#30204f}
+.lyvora-discount,.lyvora-bulk-head>span{background:#eee8ff;color:#433075}
+.lyvora-desktop-buy .lyvora-add,.lyvora-sticky-buy .lyvora-add{background:#FAFAFA;color:#433075;border-color:#433075}
+.lyvora-desktop-buy .lyvora-buy,.lyvora-sticky-buy .lyvora-buy{background:#433075;color:#FAFAFA;border-color:#433075}
+.lyvora-size-modal{background:#FAFAFA;color:#0D0D0D;border-color:#e7e1f2}
+.lyvora-size-modal h2{color:#30204f}
+.lyvora-chart-confirm{background:#433075;color:#FAFAFA}
+@media(prefers-color-scheme:dark){/* Keep Zarika's intentional soft-white luxury canvas consistent regardless of device theme. */html,body{background:#FAFAFA;color:#0D0D0D}}
